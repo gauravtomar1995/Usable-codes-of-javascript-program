@@ -1,0 +1,93 @@
+<html>
+<head>
+
+     <style type="text/css">
+       #classes1{
+	   margin-bottom:5px;
+	   margin-left:22px;
+	   margin-top:5px;
+	   }
+	    #full_name{
+	   margin-bottom:5px;
+	   margin-left:29px;
+	   margin-top:5px;
+	   }
+	   #classes2{
+	   margin-bottom:5px;
+	   margin-left:29px;
+	   margin-top:5px;
+	   }
+	  
+	   
+	  
+
+     </style>
+
+     <title>Display the name in title case after submitting the form</title>
+</head>
+
+<body>
+
+
+	<form>
+	     Name :<input type="text"    width = "30px"  height="5px" id="full_name"/> <br />
+	   Contact:<input type="text"    width = "30px"  height="5px" id="classes1"/> <br />
+	    Email :<input type="text"    width = "30px"  height="5px" id="classes2"/><br />             
+               <input type ="button" value ="submit" onclick ="display_name()"/>
+	</form>	
+	
+	
+	<script type="text/javascript">
+	               function titleCase(str) {
+                            str = str.toLowerCase().split(' ');
+                            for (var i = 0; i < str.length; i++) {
+                            str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
+                                    }
+                           return str.join(' ');
+                          }
+	
+		
+		     function display_name(){
+	              
+                   var org_name = document.getElementById("full_name").value;	
+                     
+					   
+					   var result = titleCase(org_name);
+                         document.write("Thank you"+" "+result+" "+"for submitting your details");   				   
+		 
+		           }
+		 
+		 
+		
+	       
+	    
+	
+    </script>	
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+
+
+
+    
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
