@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>Make a sentence or word in title case</title>
+</head>
+<body>
+<script = "text/javascript">
+function titleCase(str) {
+  str = str.toLowerCase().split(' ');
+  for (var i = 0; i < str.length; i++) {
+    str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
+  }
+  return str.join(' ');
+}
+var x = titleCase("I'm a little tea pot");
+document.write(x);
+</script>
+</body>
+</html>
